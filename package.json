@@ -1,6 +1,6 @@
 {
   "name": "css-units",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Value-type representation of CSS units (e.g. px, cm, deg) and a conversion function",
   "main": "index.js",
   "directories": {
