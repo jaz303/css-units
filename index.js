@@ -45,7 +45,7 @@ function convert(value, from, to) {
     var ixf = UNITS[from], ixt = UNITS[to];
 
     if (typeof ixf !== 'number') throw new Error("invalid unit: " + from);
-    if (typeof ixf !== 'number') throw new Error("invalid unit: " + to);
+    if (typeof ixt !== 'number') throw new Error("invalid unit: " + to);
 
     var factor = CONVERSION[ixf][ixt];
     if (factor !== null) {
@@ -54,6 +54,10 @@ function convert(value, from, to) {
 
     throw new Error("no conversion exists between: " + from + ", " + to);
 
+}
+
+function convertValue(toUnit, value) {
+    return new Value(convert(value.value, value.unit, toUnit), toUnit);
 }
 
 function Value(value, unit) {
