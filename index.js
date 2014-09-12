@@ -40,7 +40,7 @@ var CONVERSION = [
     /* ms */    [ _,         _,         _,         _,         _,         _,         _,           _,             0.001,      1       ]
 ];
 
-function convert(value, from, to) {
+function convert(to, from, value) {
     
     var ixf = UNITS[from], ixt = UNITS[to];
 
@@ -57,7 +57,7 @@ function convert(value, from, to) {
 }
 
 function convertValue(toUnit, value) {
-    return new Value(convert(value.value, value.unit, toUnit), toUnit);
+    return new Value(convert(toUnit, value.unit, value.value), toUnit);
 }
 
 function Value(value, unit) {
@@ -76,7 +76,7 @@ Value.prototype.toString = function() {
 }
 
 Value.prototype.convertTo = function(toUnit) {
-    return convert(this.value, this.unit, toUnit);
+    return convertValue(toUnit, this);
 }
 
 exports = module.exports = function(value, unit) {
@@ -85,3 +85,4 @@ exports = module.exports = function(value, unit) {
 
 exports.Value = Value;
 exports.convert = convert;
+exports.convertValue = convertValue;

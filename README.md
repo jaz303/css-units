@@ -37,9 +37,9 @@ Returns a CSS-compatible string representation of the value.
 
 Convert `value` to `otherUnit`. Returns a new instance of `unit.Value` on success, throws an error when no conversion is possible.
 
-#### `unit.convert(value, fromUnit, toUnit)`
+#### `unit.convert(toUnit, fromUnit, value)`
 
-Convert the number `value` from `fromUnit` to `toUnit`. Returns a number on success, throws an error when no conversion is possible.
+Convert the number `value` from `fromUnit` to `toUnit`. Returns a number on success, throws an error when no conversion is possible. Note the reversed argument order; this is to promote use of partial-application in FP applications.
 
 #### `unit.convertValue(toUnit, value)`
 
