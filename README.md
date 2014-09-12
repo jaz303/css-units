@@ -23,7 +23,7 @@ var unit = require('css-units');
 #### `var v = unit(value, unit)`
 #### `var v = new unit.Value(value, unit)`
 
-Create a new object with given `value` and `unit`.
+Create a new object with the given numeric `value` and string `unit` (one of `in`, `cm`, `pc`, `mm`, `pt`, `px`, `deg`, `rad`, `s`, `ms`, `%`, `em` or `ex`).
 
 #### `v.value`
 
