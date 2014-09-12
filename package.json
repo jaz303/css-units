@@ -1,0 +1,31 @@
+{
+  "name": "css-units",
+  "version": "0.0.0",
+  "description": "Value-type representation of CSS units (e.g. px, cm, deg) and a conversion function",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "tape": "^2.14.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "node test/all.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jaz303/css-units.git"
+  },
+  "keywords": [
+    "css",
+    "unit",
+    "value"
+  ],
+  "author": "Jason Frame <jason@onehackoranother.com> (http://jasonframe.co.uk)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jaz303/css-units/issues"
+  },
+  "homepage": "https://github.com/jaz303/css-units"
+}
